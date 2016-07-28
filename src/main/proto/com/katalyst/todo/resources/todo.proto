@@ -9,6 +9,7 @@ message Note {
   message Metadata {
   	google.protobuf.Timestamp timestamp = 1;
   	string user_id = 2;
+  	string message_id = 3;
   }
   
   Metadata metadata = 1;
