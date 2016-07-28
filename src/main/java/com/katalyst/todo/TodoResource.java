@@ -13,6 +13,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -37,6 +38,7 @@ public class TodoResource {
   private static Map<String, Todo> todos = new HashMap<>();
 
   @GET
+  @Produces(MediaType.APPLICATION_JSON)
   public String getTodos() {
     return GSON.toJson(todos.values());
   }
@@ -44,10 +46,10 @@ public class TodoResource {
   @POST
   @Consumes(MediaType.APPLICATION_JSON)
   public Response addTodo(String jsonTodo) throws InvalidProtocolBufferException {
-    Todo.Builder todo = Todo.newBuilder();
     String id = UUID.randomUUID().toString();
-    JsonFormat.parser().merge(jsonTodo, todo);
 
+    Todo.Builder todo = Todo.newBuilder();
+    JsonFormat.parser().merge(jsonTodo, todo);
     todo.getMetadataBuilder()
         .setId(id)
         .setTimestamp(Timestamps.fromMillis(Instant.now().toEpochMilli()));

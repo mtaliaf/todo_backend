@@ -12,6 +12,12 @@
 
   <listener>
       <listener-class>
+          com.katalyst.todo.FirebaseListener
+      </listener-class>
+  </listener>
+  
+  <listener>
+      <listener-class>
           org.jboss.resteasy.plugins.guice.GuiceResteasyBootstrapServletContextListener
       </listener-class>
   </listener>

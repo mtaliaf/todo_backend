@@ -21,10 +21,12 @@ repositories {
 dependencies {
     compile 'biz.paluch.redis:lettuce:4.2.+'
     compile 'com.google.code.gson:gson:2.+'
+	compile 'com.google.firebase:firebase-server-sdk:3.0.+'
     compile 'com.google.guava:guava:19.+'
     compile 'com.google.inject:guice:4.+'
     compile 'com.google.protobuf:protobuf-java:3.+'
     compile 'com.google.protobuf:protobuf-java-util:3.+'
+	compile 'javax.servlet:javax.servlet-api:3.1.+'
     compile 'org.jboss.resteasy:resteasy-jaxrs:3.+'
 	compile 'org.jboss.resteasy:resteasy-guice:3.+'
     
