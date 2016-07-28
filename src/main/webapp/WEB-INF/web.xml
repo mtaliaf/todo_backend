@@ -7,7 +7,7 @@
 
   <context-param>
       <param-name>resteasy.guice.modules</param-name>
-      <param-value>com.katalyst.todo.HelloModule</param-value>
+      <param-value>com.katalyst.todo.TodoModule</param-value>
   </context-param>
 
   <listener>

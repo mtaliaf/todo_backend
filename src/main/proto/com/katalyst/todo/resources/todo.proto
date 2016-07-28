@@ -1,0 +1,16 @@
+syntax = "proto3";
+package todo;
+
+option java_package = "com.katalyst.toto.resources";
+
+import "google/protobuf/timestamp.proto";
+
+message Note {
+  message Metadata {
+  	google.protobuf.Timestamp timestamp = 1;
+  	string user_id = 2;
+  }
+  
+  Metadata metadata = 1;
+  string body = 2;
+}
