@@ -2,14 +2,15 @@ syntax = "proto3";
 package todo;
 
 option java_package = "com.katalyst.toto.resources";
+option java_outer_classname = "Resourses";
 
 import "google/protobuf/timestamp.proto";
 
-message Note {
+message Todo {
   message Metadata {
   	google.protobuf.Timestamp timestamp = 1;
   	string user_id = 2;
-  	string message_id = 3;
+  	string id = 3;
   }
   
   Metadata metadata = 1;
