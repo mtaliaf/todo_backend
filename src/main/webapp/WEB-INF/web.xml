@@ -7,7 +7,7 @@
 
   <context-param>
       <param-name>resteasy.guice.modules</param-name>
-      <param-value>com.katalyst.todo.TodoModule</param-value>
+      <param-value>com.katalyst.todo.TodoModule,org.jboss.resteasy.plugins.guice.ext.RequestScopeModule</param-value>
   </context-param>
 
   <listener>

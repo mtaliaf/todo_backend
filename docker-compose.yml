@@ -8,8 +8,6 @@ services:
       - "443:8443"
     volumes:
       - ./build/libs:/opt/jboss/wildfly/standalone/deployments/
-    links:
-      - redis
   redis:
     container_name: redis-db
     image: redis:3
