@@ -1,0 +1,8 @@
+.settings/
+#build/
+bin/
+.project
+Dockerfile
+docker-compose.yml
+gradlew.bat
+README.md
